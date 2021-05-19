@@ -3,6 +3,7 @@ templateKey: post.template
 title: Boe! Schrok je? Mooi, daar leer je van!
 date: 2021-03-17T13:28:28.885Z
 image: /img/dennis1.png
+nameOfImage: halloween
 auteur: Dennis Stassen
 ---
 Iets langer dan een jaar geleden zat ik samen met een collega in een grote plenaire zaal bij een onderwijscongres. Op het scherm vooraan in de zaal stond de volgende vraag geprojecteerd: 'Wat vinden leerlingen, ouders, docenten en de maatschappij het belangrijkste op school?'. "Wat denken jullie?" vroeg Harold Bekkering die de dag aftrapte als eerste spreker. Dat ouders sfeer en een veilig schoolklimaat het belangrijkste vonden was in de lijn der verwachting van de deelnemers. De meerderheid in de zaal verwachtte vervolgens ook dat sfeer of sociale contacten het hoogst op de agenda stond bij leerlingen. Het was een behoorlijke verrassing te horen dat **het belangrijkste voor leerlingen is dat ze iets willen doen op school. En juist doordat dat antwoord mij verraste is het mij nog steeds bijgebleven.**'Hersenen zijn een verwachtingsmachine' stond op de vervolgslide. Hoe groter de schrik als gevolg van het horen van iets - dat wil zeggen; hoe groter de afwijking van je eigen verwachting - hoe sterker het leereffect op de lange termijn (Clark, 2013).
