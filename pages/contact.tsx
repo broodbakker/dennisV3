@@ -2,7 +2,7 @@ import Nav from "../components/nav";
 import { Title } from "../components/title";
 import { Layout } from "../components/layout"
 // import { ContactForm } from "../components/contactForm";
-import ContactForm from "../components/contactForm/formNew";
+import { ContactForm } from "../components/contactForm/formNew";
 
 const Contact = () => {
   return (
