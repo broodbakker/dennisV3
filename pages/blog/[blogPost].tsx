@@ -26,7 +26,11 @@ const BlogPost = (props: any) => {
 
             <h6 className="text text-headerColor mt-4 mb-4">{props.attributes.Subtitle}</h6>
 
-            <div dangerouslySetInnerHTML={{ __html: props.html }}></div>
+            <div className="mb-12 text-xl mx-auto"><div className="prose-xl md:prose-2xl mx-auto" dangerouslySetInnerHTML={{ __html: props.html }}></div>
+            </div>
+
+
+
           </div>
         </div>
       </div>

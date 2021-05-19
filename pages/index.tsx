@@ -40,7 +40,6 @@ const Home: FunctionComponent<HomeProps> = ({ blog }) => {
 }
 
 export async function getStaticProps() {
-  const a = 11
   const posts1: PostData[] = await importPosts();
   const blog: PostData = JSON.parse(JSON.stringify(posts1));
 

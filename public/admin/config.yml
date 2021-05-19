@@ -1,7 +1,7 @@
-
 backend:
   name: git-gateway
   branch: master
+  repo: broodbakker/dennisV3
 media_folder: /public/img
 public_folder: /img
 publish_mode: editorial_workflow
