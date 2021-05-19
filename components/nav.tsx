@@ -14,7 +14,7 @@ const Nav = () => (
       <Link href="/" passHref>
         <a className="h-12 sm:h-16">
           <img
-            className="h-full cursor-pointer sm:w-24"
+            className="h-full cursor-pointer "
             alt="logo dennis stassen"
             src={
               "https://res.cloudinary.com/dta9vptzh/image/upload/c_scale,w_150/v1602325989/dennisStassen/logoDennis-1.png"
@@ -47,6 +47,7 @@ const Nav = () => (
 
 
         <a className=" w-10 h-10 bg-white my-auto rounded ml-2" href="https://nl.linkedin.com/in/dennisstassen">
+
 
           <IconContext.Provider value={{ color: "#f78e1c", className: "mr-2 h-full w-full rounded" }}>
 
