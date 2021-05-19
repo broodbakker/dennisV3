@@ -1,9 +1,19 @@
-@import "tailwindcss/base";
+@tailwind base; /* Preflight will be injected here */
+
+@tailwind components;
+
+@tailwind utilities;
 
 
+@layer base {
+  p {
+    @apply mb-2;
+  }
+  h2 {
+    @apply text-xl;
+  }
+}
 
-
-@import "tailwindcss/components";
 
 .content-container {
   @apply relative pb-16 px-8 mx-auto;
@@ -57,7 +67,7 @@
   @apply object-cover h-full min-h-screen w-full absolute top-0;
 } */
 
-@import "tailwindcss/utilities";
+
 
 @layer base {
   p {

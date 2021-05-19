@@ -2,16 +2,18 @@ const fs = require('fs');
 const blogPostsFolder = './content';
 const withPWA = require('next-pwa')
 
+const Mode = require('frontmatter-markdown-loader/mode')
 
 module.exports = withPWA({
   future: {
     webpack5: true,
   },
   pwa: { dest: 'public' },
-  webpack: configuration => {
+  webpack: (configuration) => {
     configuration.module.rules.push({
       test: /\.md$/,
       use: 'frontmatter-markdown-loader',
+
     });
     return configuration;
   }, async exportPathMap(defaultPathMap) {
