@@ -1,23 +1,58 @@
-backend:
-  name: github
-  repo: broodbakker/dennisV3 # CHANGE ME
-  branch: master
-  base_url: https://dennis-v3-git-master-mrtjnvanderee.vercel.app # CHANGE ME
-  auth_endpoint: api/auth
 
-media_folder: /img
+backend:
+  name: git-gateway
+  branch: master
+media_folder: /static/img
 public_folder: /img
+publish_mode: editorial_workflow
+
 
 collections:
-  - name: "blog"
-    label: "Blog"
-    folder: "blog"
+  - name: auteurs
+    label: Auteurs
+    folder: "src/auteurs"
     create: true
-    slug: "{{year}}-{{month}}-{{day}}-{{slug}}"
-    editor:
-      preview: false
     fields:
-      - { label: "Title", name: "title", widget: "string" }
-      - { label: "Publish Date", name: "date", widget: "datetime" }
-      - { label: "Description", name: "description", widget: "string" }
-      - { label: "Body", name: "body", widget: "markdown" }
+      - {name: naam, label: Naam}
+
+  - name: tags
+    label: Tags
+    folder: "src/tags"
+    create: true
+    fields:
+      - {name: naam, label: Naam}
+
+
+  - name: posts
+    label: Posts
+    format: json
+    folder: "src/posts"
+    create: true
+    fields:
+      - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post.template"}
+      - {label: "Titel", name: "titel", widget: "string"}
+      - {label: "Subtitel", name: "Subtitel", widget: "string"}
+      - {label: "Publish Date", name: "date", widget: "datetime"}
+      - {label: "Image", name: "image", widget: "image"}
+      - {label: "Body", name: "body", widget: "markdown"}
+      - label: "Onderwerp"
+        name: "onderwerp"
+        widget: "select"
+        options: ["history","human","nature","quirky","space","tech"]
+      - name: auteur
+        label: Auteur
+        widget: relation
+        collection: auteurs
+        searchFields: [naam]
+        valueField: naam
+      - name: tags
+        label: Tags
+        widget: relation
+        collection: tags
+        searchFields: [naam]
+        multiple: true
+        valueField: naam
+        required: false
+
+
+
