@@ -1,7 +1,7 @@
 ---
 templateKey: post.template
 title: Boe! Schrok je? Mooi, daar leer je van!
-date: 2021-03-17T13:28:28.885Z
+date: 2020-12-02T13:28:28.885Z
 image: /img/dennis1.png
 nameOfImage: halloween
 auteur: Dennis Stassen
