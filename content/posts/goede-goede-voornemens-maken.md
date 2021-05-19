@@ -1,7 +1,7 @@
 ---
 templateKey: post.template
 title: Goede goede voornemens maken!
-date: 2021-05-12T13:24:48.239Z
+date: 2021-02-18T11:36:52.684Z
 image: /img/dennis2.png
 nameOfImage: feest-kerstdagen-nieuwjaar
 auteur: Dennis Stassen
