@@ -2,43 +2,36 @@
 backend:
   name: git-gateway
   branch: master
-media_folder: /static/img
+media_folder: /public/img
 public_folder: /img
 publish_mode: editorial_workflow
-
 
 collections:
   - name: auteurs
     label: Auteurs
-    folder: "src/auteurs"
+    folder: "content/auteurs"
     create: true
     fields:
       - {name: naam, label: Naam}
 
   - name: tags
     label: Tags
-    folder: "src/tags"
+    folder: "content/tags"
     create: true
     fields:
       - {name: naam, label: Naam}
 
-
   - name: posts
     label: Posts
-    format: json
-    folder: "src/posts"
+    folder: "content/posts"
     create: true
     fields:
       - {label: "Template Key", name: "templateKey", widget: "hidden", default: "post.template"}
-      - {label: "Titel", name: "titel", widget: "string"}
-      - {label: "Subtitel", name: "Subtitel", widget: "string"}
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Subtitle", name: "Subtitle", widget: "string", required: false}
       - {label: "Publish Date", name: "date", widget: "datetime"}
       - {label: "Image", name: "image", widget: "image"}
       - {label: "Body", name: "body", widget: "markdown"}
-      - label: "Onderwerp"
-        name: "onderwerp"
-        widget: "select"
-        options: ["history","human","nature","quirky","space","tech"]
       - name: auteur
         label: Auteur
         widget: relation
