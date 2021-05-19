@@ -8,7 +8,7 @@ import { Header } from "../components/header";
 import { BackgroundImage } from "../components/backgroundImage";
 import { BlogPosts } from "../components/index__blogPosts";
 //functions
-import { importPosts } from "../functions/importPosts";
+import { importPost1 } from "../functions/importPosts";
 
 //typescript
 import { PostData } from "../typescript"
@@ -40,8 +40,8 @@ const Home: FunctionComponent<HomeProps> = ({ blog }) => {
 }
 
 export async function getStaticProps() {
-  const posts1: PostData[] = await importPosts();
-  const blog: PostData = JSON.parse(JSON.stringify(posts1));
+  const posts: PostData[] = await importPost1();
+  const blog: PostData = JSON.parse(JSON.stringify(posts));
 
   return { props: { blog } }
 }

@@ -36,3 +36,8 @@ export interface IFormItems {
   type: string;
   options?: SelectOptions[];
 }
+
+export type PathAndDate = {
+  date: Date,
+  path: string
+}

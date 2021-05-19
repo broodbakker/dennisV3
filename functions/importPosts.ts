@@ -1,3 +1,5 @@
+import { PathAndDate } from "../typescript"
+
 export const importPosts = async () => {
   // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
   // second flag in require.context function is if subdirectories should be searched
@@ -31,11 +33,12 @@ export const importPost = async (path: string) => {
 
 
 export const importPost1 = async () => {
-  const PostPathAndDate: any = await getPostPathAndDate()
-  const Sorted = sortingPost(PostPathAndDate)
+  const PostPathAndDate: PathAndDate[] = await getPostPathAndDate()
+
+  const sorted: PathAndDate[] = sortingPost(PostPathAndDate)
 
   return Promise.all(
-    Sorted.map(async (path: any) => {
+    sorted.map(async (path: PathAndDate) => {
       const markdown = await import(`../content/posts/${path.path}`);
 
       return { ...markdown, slug: path.path.substring(0, path.path.length - 3) };
