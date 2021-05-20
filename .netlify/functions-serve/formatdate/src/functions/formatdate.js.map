@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../functions/formatdate.ts"],
+  "sourceRoot": "/Users/janneke/developer/code/web_projects/website_dennis3/.netlify/functions-serve",
+  "sourcesContent": ["export const formatDate = (num: string) => num.split(\"T\");"],
+  "mappings": ";;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAO,IAAM,aAAa,CAAC,QAAgB,IAAI,MAAM;",
+  "names": []
+}

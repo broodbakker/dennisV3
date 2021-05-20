@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../functions/fetcher.ts"],
+  "sourceRoot": "/Users/janneke/developer/code/web_projects/website_dennis3/.netlify/functions-serve",
+  "sourcesContent": ["\n\n\nconst addTwoStrings = (accumulator: string, currentValue: any) =>\n  `${accumulator}/${currentValue}`;\n\nexport const reduceArgs = (params: any[]) => params.reduce(addTwoStrings);\n\n\n\nexport const MakeCompleteURL = (url: string[]): string => {\n  if (url.length === 1) return url[0];\n  return reduceArgs(url);\n};\n"],
+  "mappings": ";;;;;;;;AAAA;AAAA;AAAA;AAAA;AAAA;AAGA,IAAM,gBAAgB,CAAC,aAAqB,iBAC1C,GAAG,eAAe;AAEb,IAAM,aAAa,CAAC,WAAkB,OAAO,OAAO;AAIpD,IAAM,kBAAkB,CAAC,QAA0B;AACxD,MAAI,IAAI,WAAW;AAAG,WAAO,IAAI;AACjC,SAAO,WAAW;AAAA;",
+  "names": []
+}

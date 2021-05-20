@@ -1,0 +1,8 @@
+{
+  "version": 3,
+  "sources": ["../../functions/test.ts"],
+  "sourceRoot": "/Users/janneke/developer/code/web_projects/website_dennis3/.netlify/functions-serve",
+  "sourcesContent": ["import { Handler } from '@netlify/functions'\n\n\n\nconst handler: Handler = async function (event, context) {\n  return {\n    statusCode: 200,\n    body: JSON.stringify({ message: \"HEllow world\" })\n  }\n}\n\n\nexport { handler }\n\n"],
+  "mappings": ";;;;;;;;AAAA;AAAA;AAAA;AAAA;AAIA,IAAM,UAAmB,eAAgB,OAAO,SAAS;AACvD,SAAO;AAAA,IACL,YAAY;AAAA,IACZ,MAAM,KAAK,UAAU,CAAE,SAAS;AAAA;AAAA;",
+  "names": []
+}
