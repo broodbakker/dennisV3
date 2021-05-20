@@ -11,7 +11,6 @@ type HomeProps = {
 }
 
 const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
-  console.log(videos)
   return (
     <Layout title="Materiaal">
       <div className="relative">
@@ -23,7 +22,7 @@ const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
 
           <div className="mb-8 ">
             <p className="text-lg border-b-2 border-gray-200 pb-2 text-fontColor pb-4 mb-4">
-              Via onderstaande links kun je kijken tussen de werkvormen en
+              tVia onderstaande links kun je kijken tussen de werkvormen en
               materialen die ik gemaakt heb voor mijn leerlingen. Gesorteerd op
               jaarlaag vind je werkvormen en presentaties voor economie lessen en in
               de map algemeen materialen die ook voor andere vakken toepasbaar zijn.
