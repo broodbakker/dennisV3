@@ -6,9 +6,7 @@ export const ContactForm = () => {
   return (
     <form name="contact" action="/success" method="POST" data-netlify="true">
 
-      <p className="screen-reader-text">
-        <label><input name="bot-field" /></label>
-      </p>
+      <input type="hidden" name="form-name" value="contact" />
       <div className="flex flex-wrap -mx-3 mb-2">
 
 
