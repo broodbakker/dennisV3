@@ -129,20 +129,24 @@ const Materiaal = () => {
   </Layout>)
 }
 
-// export async function getStaticProps() {
-//   const res = await fetch(`http://localhost:8888/functions/getTYvideos`)
-//   const data = await res.json()
+export async function getStaticProps() {
+  const res = await fetch(`https://dennis1.netlify.app/.netlify/functions/getYTvideos
+  `)
 
-//   if (!data) {
-//     return {
-//       notFound: true,
-//     }
-//   }
+  console.log("res", res)
+  const data = res.body
+  console.log("data", data)
 
-//   return {
-//     props: { data }, // will be passed to the page component as props
-//   }
-// }
+  // if (!data) {
+  //   return {
+  //     notFound: true,
+  //   }
+  // }
+  const a = 5
+  return {
+    props: { a }, // will be passed to the page component as props
+  }
+}
 
 
 export default Materiaal;
