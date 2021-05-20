@@ -2,8 +2,9 @@ import Nav from "../components/nav";
 import { Title } from "../components/title";
 import { Layout } from "../components/layout"
 
-const Materiaal = () => (
-  <Layout title="Materiaal">
+const Materiaal = () => {
+
+  return (<Layout title="Materiaal">
     <div className="relative">
       <div className="  h-full min-h-screen w-full absolute top-0" />
       <Nav />
@@ -22,7 +23,7 @@ const Materiaal = () => (
             via via inspiratie hebben opgedaan van collega’s en andere bronnen.
             Mocht je onverhoopt eigenaar zijn van bepaalde inhoud; neem dan
             contact op.
-        </p>
+    </p>
 
           <ul>
             <li className="mb-2">
@@ -31,7 +32,7 @@ const Materiaal = () => (
                 href="https://drive.google.com/drive/folders/1n3RtRa0YGsJpYJ9-XhGrjL3uZmIQuSUZ"
               >
                 3 havo / 3 vwo
-            </a>
+        </a>
             </li>
             <li className="mb-2">
               <a
@@ -39,7 +40,7 @@ const Materiaal = () => (
                 href="https://drive.google.com/drive/folders/13ZlmFZRhHLx93_Jh-jbqLj___cCc34bG"
               >
                 4 havo / 4 vwo
-            </a>
+        </a>
             </li>
             <li className="mb-2">
               <a
@@ -47,7 +48,7 @@ const Materiaal = () => (
                 href="https://drive.google.com/drive/folders/1_QW9AcIrPOQVkJHelTbpd1w0AGXcgYe0"
               >
                 5 havo / 5 vwo
-            </a>
+        </a>
             </li>
             <li className="mb-2">
               <a
@@ -55,7 +56,7 @@ const Materiaal = () => (
                 href="https://drive.google.com/drive/folders/121vv_HEM97XdHnWvPg6yULTxAG4bhBwD"
               >
                 6 vwo
-            </a>
+        </a>
             </li>
             <li className="mb-2">
               <a
@@ -63,19 +64,19 @@ const Materiaal = () => (
                 href="https://drive.google.com/drive/folders/1YWKZQVZBsbe-i3dJDxP7rnBGNcHOJmcR"
               >
                 Algemene werkvormen
-            </a>
+        </a>
             </li>
           </ul>
         </div>
 
         <h2 className="relative text-2xl md:text-3xl text-fontColor mb-2">
           Hier zijn een aantal video's van mijn online lessen.
-      </h2>
+  </h2>
 
         <a href="https://www.youtube.com/channel/UC3Rvdgj_8AfmrqWfZ9Lwh8w" className=" mb-2">
           <span className="border-solid border-b border-color1 text-lg text-fontColor" >
             Als je meer wil zien klik op deze link.
-        </span>
+    </span>
         </a>
 
         <div className="grid md:grid-cols-2 gap-4 max-w-6xl mx-auto ">
@@ -125,7 +126,23 @@ const Materiaal = () => (
         </div>
       </div>
     </div>
-  </Layout>
-);
+  </Layout>)
+}
+
+// export async function getStaticProps() {
+//   const res = await fetch(`http://localhost:8888/functions/getTYvideos`)
+//   const data = await res.json()
+
+//   if (!data) {
+//     return {
+//       notFound: true,
+//     }
+//   }
+
+//   return {
+//     props: { data }, // will be passed to the page component as props
+//   }
+// }
+
 
 export default Materiaal;
