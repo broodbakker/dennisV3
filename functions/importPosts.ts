@@ -1,8 +1,12 @@
 import { PathAndDate } from "../typescript"
 
+export const importPost = async (path: string) => {
+  const markdown = await import(`../content/posts/${path}`);
+
+  return markdown
+};
+
 export const importPosts = async () => {
-  // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
-  // second flag in require.context function is if subdirectories should be searched
   const markdownFiles = require.context('../content/posts', false, /\.md$/).keys()
     .map(relativePath => relativePath.substring(2));
 
@@ -15,8 +19,6 @@ export const importPosts = async () => {
 };
 
 export const importPostSlugs = async () => {
-  // https://medium.com/@shawnstern/importing-multiple-markdown-files-into-a-react-component-with-webpack-7548559fce6f
-  // second flag in require.context function is if subdirectories should be searched
   const markdownFiles = require.context('../content/posts', false, /\.md$/).keys()
     .map(relativePath => relativePath.substring(2, relativePath.length - 3));
   return Promise.all(
@@ -25,14 +27,7 @@ export const importPostSlugs = async () => {
 };
 
 
-export const importPost = async (path: string) => {
-  const markdown = await import(`../content/posts/${path}`);
-
-  return markdown
-};
-
-
-export const importPost1 = async () => {
+export const importPostsSorted = async () => {
   const PostPathAndDate: PathAndDate[] = await getPostPathAndDate()
 
   const sorted: PathAndDate[] = sortingPost(PostPathAndDate)

@@ -1,8 +1,7 @@
 import Nav from "../components/nav";
 import { Title } from "../components/title";
 import { Layout } from "../components/layout"
-// import { ContactForm } from "../components/contactForm";
-import { ContactForm } from "../components/contactForm/formNew";
+import { ContactForm } from "../components/contactForm/form";
 
 const Contact = () => {
   return (
@@ -17,7 +16,9 @@ const Contact = () => {
             title="Contact"
             subtitle="Geïntereseerd in een training of heb je een vraag? Vul gerust het formulier in en ik zal zo snel mogelijk reageren"
           />
+          <div  className="mt-8">
           <ContactForm />
+          </div>
         </div>
       </div>
     </Layout>

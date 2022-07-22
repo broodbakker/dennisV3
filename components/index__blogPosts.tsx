@@ -1,8 +1,14 @@
 import { BlogPost } from "./blogPost"
+//typescript
+import { PostData } from "../typescript"
+//constants
+import {NUMBER_POST_FRONTPAGE} from "../util/constants"
 
-export const BlogPosts = ({ blogPosts }: any) => {
+type BlogPostsProps = {
+  blogPosts: PostData[]
+}
 
-  const numberOfBlogPostOnPage = 3
+export const BlogPosts = ({ blogPosts }: BlogPostsProps) => {
   return (<>
     <div className="relative p-6 shadow-offsetHover" >
       <div className="absolute w-full h-full inset-0 opacity-75 rounded-lg bg-color3" />
@@ -12,7 +18,7 @@ export const BlogPosts = ({ blogPosts }: any) => {
     </h2>
       <article className="relative grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 max-w-6xl mx-auto ">
         {blogPosts.map((blogPost: any, index: number) => {
-          if (index < numberOfBlogPostOnPage) return <BlogPost blogPost={blogPost} key={index} />
+          if (index < NUMBER_POST_FRONTPAGE) return <BlogPost blogPost={blogPost} key={index} />
         })}
       </article>
     </div>

@@ -1,9 +1,14 @@
 import Link from "next/link";
-
+//functions
 import { formatDate } from "../functions/formatdate"
+//typescript
+import { PostData } from "../typescript"
 
-export const BlogPost = ({ blogPost }: any) => {
+type BlogPostProps = {
+  blogPost: PostData
+}
 
+export const BlogPost = ({ blogPost }: BlogPostProps) => {
   const urlLink = blogPost.slug
   const nameOfImage = blogPost.attributes.nameOfImage
   return (
@@ -21,9 +26,6 @@ export const BlogPost = ({ blogPost }: any) => {
           <h2 className="text-lg md:text-xl font-semibold leading-tight text-headingColor">
             {blogPost.attributes.title}
           </h2>
-          <p className="text-sm leading-tight ">
-            {blogPost.Subtitle}
-          </p>
           <time className="absolute bottom-0 text-xs mb-2">
             {" "}
             {formatDate(blogPost.attributes.date)[0]}

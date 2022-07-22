@@ -1,22 +1,19 @@
 import { FormikProps } from "formik";
 
-
 export interface PostData {
   default: { attributes: any, html: string }
   attributes: {
     templateKey: string;
-    titel: string;
+    title: string;
     Subtitel: string
     date: Date;
     image: string;
-    onderwerp: string
+    nameOfImage:string
     auteur: string;
-    tags: string[]
   }
   html: string
   slug: string
 }
-
 
 type Values = {
   email: "";
@@ -25,7 +22,6 @@ type Values = {
   name: "";
   subject: "";
 };
-
 
 type SelectOptions = { value: string; label: string };
 

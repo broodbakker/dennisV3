@@ -10,10 +10,8 @@ export const Header = () => (
     />
     <div className="relative">
       <h4 className="text-white text-lg">
-        Ben
-        je ook benieuwd welke lessen jij kunt trekken uit de praktijk van een economiedocent?
+        Ben je ook benieuwd welke lessen jij kunt trekken uit de praktijk van een economiedocent?
       </h4>
-
       <p className="my-2 text-lg text-white">
         Hier deel ik mijn ideeën over goed lesgeven en mijn passie voor economie.
       </p>

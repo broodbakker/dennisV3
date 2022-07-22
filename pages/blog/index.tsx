@@ -5,10 +5,10 @@ import { Layout } from "../../components/layout"
 //typescript
 import { PostData } from "../../typescript"
 //functions
-import { importPost1 } from "../../functions/importPosts";
+import { importPostsSorted } from "../../functions/importPosts";
 
 type Props = {
-  blog: any[];
+  blog: PostData[];
 };
 
 const Blog: React.FunctionComponent<Props> = ({ blog }) => {
@@ -16,9 +16,7 @@ const Blog: React.FunctionComponent<Props> = ({ blog }) => {
   return (
     <Layout title="blog van Dennis Stassen">
       <div className="relative">
-
         <Nav />
-
         <div className="relative pb-16 px-8 mx-auto md:max-w-screen-md">
           <Title
             color="#013f5d"
@@ -38,11 +36,10 @@ const Blog: React.FunctionComponent<Props> = ({ blog }) => {
 };
 
 export async function getStaticProps() {
-
-  const posts: any = await importPost1();
-
+  const posts: PostData[] = await importPostsSorted();
 
   const blog: PostData = JSON.parse(JSON.stringify(posts));
+
 
 
   return { props: { blog } }

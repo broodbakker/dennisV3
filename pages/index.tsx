@@ -1,5 +1,4 @@
 import React, { FunctionComponent } from 'react'
-
 //components
 import { Layout } from "../components/layout"
 import Nav from "../components/nav";
@@ -8,8 +7,7 @@ import { Header } from "../components/header";
 import { BackgroundImage } from "../components/backgroundImage";
 import { BlogPosts } from "../components/index__blogPosts";
 //functions
-import { importPost1 } from "../functions/importPosts";
-
+import { importPostsSorted } from "../functions/importPosts";
 //typescript
 import { PostData } from "../typescript"
 
@@ -40,8 +38,9 @@ const Home: FunctionComponent<HomeProps> = ({ blog }) => {
 }
 
 export async function getStaticProps() {
-  const posts: PostData[] = await importPost1();
+  const posts: PostData[] = await importPostsSorted();
   const blog: PostData = JSON.parse(JSON.stringify(posts));
+
 
   return { props: { blog } }
 }

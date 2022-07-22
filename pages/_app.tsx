@@ -5,12 +5,6 @@ import Head from 'next/head';
 
 import 'tailwindcss/tailwind.css'
 
-// MUI Core
-//import CssBaseline from '@material-ui/core/CssBaseline';
-//import { ThemeProvider } from '@material-ui/core/styles';
-// Utils
-//import theme from '../utils/theme';
-
 const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
   React.useEffect(() => {
     // Remove the server-side injected CSS.
@@ -22,21 +16,13 @@ const MyApp: React.FC<AppProps> = ({ Component, pageProps }) => {
 
   return (
     <>
-
-
       <Head>
         <title>Website Dennis stassen</title>
 
         <meta name="viewport" content="minimum-scale=1, initial-scale=1, width=device-width" />
         <link rel="icon" href="/logoDennis.ico" />
       </Head>
-      {/* <ThemeProvider theme={theme}>
-        <CssBaseline /> */}
-
-
       <Component {...pageProps} />
-      {/* </ThemeProvider> */}
-
     </>
   );
 };

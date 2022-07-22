@@ -2,9 +2,10 @@ import React, { FunctionComponent } from 'react'
 import Nav from "../components/nav";
 import { Title } from "../components/title";
 import { Layout } from "../components/layout"
+//constants
+import {NUMBER_OF_VIDEOS} from "../util/constants"
 
 import axios from 'axios'
-
 
 type HomeProps = {
   videos: any[],
@@ -20,7 +21,7 @@ const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
         <div className="relative pb-16 px-8 mx-auto md:max-w-screen-md">
           <Title color="#013f5d" title="Materiaal / video's" />
 
-          <div className="mb-8 ">
+          <div className="mb-12 mt-4 ">
             <p className="text-lg border-b-2 border-gray-200 pb-2 text-fontColor pb-4 mb-4">
               Via onderstaande links kun je kijken tussen de werkvormen en
               materialen die ik gemaakt heb voor mijn leerlingen. Gesorteerd op
@@ -31,20 +32,19 @@ const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
               via via inspiratie hebben opgedaan van collega’s en andere bronnen.
               Mocht je onverhoopt eigenaar zijn van bepaalde inhoud; neem dan
               contact op.
-    </p>
-
+            </p>
             <ul>
               <li className="mb-2">
                 <a
-                  className="border-solid border-b border-color1 text-lg text-fontColor"
+                  className="border-solid border-b border-color1 text-xl text-fontColor  hover:text-blue-900 "
                   href="https://drive.google.com/drive/folders/1n3RtRa0YGsJpYJ9-XhGrjL3uZmIQuSUZ"
                 >
                   3 havo / 3 vwo
-        </a>
+                </a>
               </li>
               <li className="mb-2">
                 <a
-                  className="border-solid border-b border-color1 text-lg text-fontColor"
+                  className="border-solid border-b border-color1 text-xl text-fontColor  hover:text-blue-900 "
                   href="https://drive.google.com/drive/folders/13ZlmFZRhHLx93_Jh-jbqLj___cCc34bG"
                 >
                   4 havo / 4 vwo
@@ -52,7 +52,7 @@ const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
               </li>
               <li className="mb-2">
                 <a
-                  className="border-solid border-b border-color1 text-lg text-fontColor"
+                  className="border-solid border-b border-color1 text-xl text-fontColor  hover:text-blue-900 "
                   href="https://drive.google.com/drive/folders/1_QW9AcIrPOQVkJHelTbpd1w0AGXcgYe0"
                 >
                   5 havo / 5 vwo
@@ -60,7 +60,7 @@ const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
               </li>
               <li className="mb-2">
                 <a
-                  className="border-solid border-b border-color1 text-lg text-fontColor"
+                  className="border-solid border-b border-color1 text-xl text-fontColor  hover:text-blue-900 "
                   href="https://drive.google.com/drive/folders/121vv_HEM97XdHnWvPg6yULTxAG4bhBwD"
                 >
                   6 vwo
@@ -68,7 +68,7 @@ const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
               </li>
               <li className="mb-2">
                 <a
-                  className="border-solid border-b border-color1 text-lg text-fontColor"
+                  className="border-solid border-b border-color1 text-xl text-fontColor  hover:text-blue-900 "
                   href="https://drive.google.com/drive/folders/1YWKZQVZBsbe-i3dJDxP7rnBGNcHOJmcR"
                 >
                   Algemene werkvormen
@@ -81,16 +81,13 @@ const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
             Hier zijn een aantal video's van mijn online lessen.
   </h2>
 
-          <a href="https://www.youtube.com/channel/UC3Rvdgj_8AfmrqWfZ9Lwh8w" className=" mb-2">
-            <span className="border-solid border-b border-color1 text-lg text-fontColor" >
+          <a href="https://www.youtube.com/channel/UC3Rvdgj_8AfmrqWfZ9Lwh8w" className=" mb-6">
+            <span className="border-solid border-b border-color1 text-xl text-fontColor  hover:text-blue-900 " >
               Als je meer wil zien klik op deze link.
     </span>
           </a>
 
-          <div className="grid md:grid-cols-2 gap-4 max-w-6xl mx-auto ">
-
-
-
+          <div className="grid md:grid-cols-2 gap-4 max-w-6xl mx-auto mt-10 ">
             {videos.map((video) => {
 
               return <div>
@@ -105,10 +102,6 @@ const Materiaal: FunctionComponent<HomeProps> = ({ videos }) => {
                 />
               </div>
             })}
-
-
-
-
           </div>
         </div>
       </div>
@@ -120,13 +113,11 @@ export async function getStaticProps() {
 
   const videos = youtubeData.data.items
 
-  const numberOfVideos = 4
-  const slicedArray = videos.slice(0, numberOfVideos);
+  const firstVideos = videos.slice(0, NUMBER_OF_VIDEOS);
 
   return {
-    props: { videos: slicedArray }, // will be passed to the page component as props
+    props: { videos: firstVideos }
   }
 }
-
 
 export default Materiaal;

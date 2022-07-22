@@ -3,13 +3,12 @@ import Nav from "../components/nav";
 
 import { Title } from "../components/title";
 import { Layout } from "../components/layout"
+
 const About = () => {
   return (
     <Layout title="over Dennis Stassen">
       <div className="relative">
-
         <Nav />
-
         <div className="relative pb-16 px-8 mx-auto md:max-w-screen-md">
           <Title color="#013f5d" title="Over Mij" />
 

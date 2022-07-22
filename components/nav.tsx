@@ -1,12 +1,8 @@
 import React from "react";
 import Link from "next/link";
 
-import LinkedInIcon from '@material-ui/icons/LinkedIn';
-
 import { GrLinkedin } from 'react-icons/gr';
-import { FaLinkedin } from 'react-icons/fa';
 import { IconContext } from "react-icons";
-
 
 const Nav = () => (
   <header className="flex fixed w-full bg-color3 justify-between py-2 px-4 z-10 items-center sm:px-12">
@@ -44,16 +40,9 @@ const Nav = () => (
           </a>
         </Link>
 
-
-
         <a className=" w-10 h-10 bg-white my-auto rounded ml-2" href="https://nl.linkedin.com/in/dennisstassen">
-
-
           <IconContext.Provider value={{ color: "#f78e1c", className: "mr-2 h-full w-full rounded" }}>
-
-
             <GrLinkedin />
-
           </IconContext.Provider>
         </a>
       </nav>
